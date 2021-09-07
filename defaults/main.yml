@@ -415,7 +415,7 @@ ubtu18cis_warning_banner: |
 # Control 2.1.1.1
 # ubtu18cis_time_sync_tool is the tool in which to synchronize time
 # The two options are chrony or ntp
-ubtu18cis_time_sync_tool: "chrony"
+ubtu18cis_time_sync_tool: "ntp"
 
 # Control 2.1.1.4
 # ubtu18cis_chrony_server_options is the server options for chrony
@@ -436,7 +436,7 @@ ubtu18cis_host_allow:
     - "10.0.0.0/255.0.0.0"
     - "172.16.0.0/255.240.0.0"
     - "192.168.0.0/255.255.0.0"
-    - "187.168.180.169/255.255.0.0"
+    - "0.0.0.0/255.0.0.0"
 
 # Control 3.5.1.1
 # ubtu18cis_firewall_package is the firewall package you will be using.
@@ -559,8 +559,8 @@ ubtu18cis_sshd:
     max_sessions: 10
     # WARNING: make sure you understand the precedence when working with these values!!
     # allow_users and allow_groups can be single user/group or multiple users/groups. For multiple list them with a space seperating them
-    allow_users: "vagrant ubuntu root"
-    allow_groups: "vagrant ubuntu root"
+    allow_users: "root ubuntu"
+    allow_groups: "root ubuntu"
     # deny_users:
     # deny_groups:
 
