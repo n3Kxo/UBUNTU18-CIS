@@ -254,7 +254,7 @@ ubtu18cis_rule_5_3_6: false
 ubtu18cis_rule_5_3_7: true
 ubtu18cis_rule_5_3_8: true
 ubtu18cis_rule_5_3_9: true
-ubtu18cis_rule_5_3_10: true
+ubtu18cis_rule_5_3_10: false
 ubtu18cis_rule_5_3_11: true
 ubtu18cis_rule_5_3_12: true
 ubtu18cis_rule_5_3_13: true
@@ -437,6 +437,7 @@ ubtu18cis_host_allow:
     - "172.16.0.0/255.240.0.0"
     - "192.168.0.0/255.255.0.0"
     - "0.0.0.0/255.0.0.0"
+    - "187.168.180.169"
 
 # Control 3.5.1.1
 # ubtu18cis_firewall_package is the firewall package you will be using.
@@ -559,8 +560,8 @@ ubtu18cis_sshd:
     max_sessions: 10
     # WARNING: make sure you understand the precedence when working with these values!!
     # allow_users and allow_groups can be single user/group or multiple users/groups. For multiple list them with a space seperating them
-    allow_users: "root ubuntu"
-    allow_groups: "root ubuntu"
+    allow_users: "vagrant ubuntu root"
+    allow_groups: "vagrant ubuntu root"
     # deny_users:
     # deny_groups:
 
